@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 use App\Controllers\HomeRecipeCollectionController;
+use App\Controllers\UserLoginController;
 use App\Controllers\UserRecipeCollectionController;
 use Slim\App;
 use Slim\Views\PhpRenderer;
@@ -12,6 +13,8 @@ return function (App $app) {
 
     $app->get('/home', HomeRecipeCollectionController::class);
     $app->get('/collection/{userid}', UserRecipeCollectionController::class);
+    $app->get('/login', UserLoginController::class);
+    $app->post('/login', UserLoginController::class);
 
 
 };
