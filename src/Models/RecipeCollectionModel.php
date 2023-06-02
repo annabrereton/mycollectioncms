@@ -40,9 +40,10 @@ class RecipeCollectionModel
 
         return $recipes;
     }
+
     public function fetchRecipeFromId(int $id): RecipeCollection
     {
-        $sql = 'SELECT `imglink`, `title`, `description`, `users_id`,  `timestamp`, `liked` '
+        $sql = 'SELECT `id`, `imglink`, `title`, `description`, `users_id`,  `timestamp`, `liked` '
             . 'FROM `recipes` '
             . 'WHERE `id` = :id; ';
 
@@ -53,6 +54,7 @@ class RecipeCollectionModel
         $recipe = $query->fetch();
 
         return new RecipeCollection(
+            $recipe['id'],
             $recipe['imglink'],
             $recipe['title'],
             $recipe['description'],
@@ -60,5 +62,33 @@ class RecipeCollectionModel
             $recipe['timestamp'],
             $recipe['liked']
         );
+    }
+
+    public function getRecipesByUserId($id): array
+    {
+        $sql = 'SELECT `id`, `imglink`, `title`, `description`, `users_id`,  `timestamp`, `liked` '
+            . 'FROM `recipes` '
+            . 'WHERE `users_id` = :id; ';
+
+        $values = [':id' => $id];
+
+        $query = $this->db->prepare($sql);
+        $query->execute($values);
+        $rows = $query->fetchAll();
+
+        $usersRecipes = [];
+        foreach ($rows as $row) {
+            $recipe = new RecipeCollection (
+                $row['id'],
+                $row['imglink'],
+                $row['title'],
+                $row['description'],
+                $row['users_id'],
+                $row['timestamp'],
+                $row['liked']
+            );
+            $usersRecipes[] = $recipe;
+        }
+        return $usersRecipes;
     }
 }

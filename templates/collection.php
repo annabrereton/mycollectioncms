@@ -6,7 +6,7 @@
 
     <title>Anna's Recipe Collection</title>
 
-    <meta name="description" content="A selection of savoury pastry recipes">
+    <meta name="description" content="A selection of Anna's recipes">
     <meta name="author" content="Anna Brereton">
 
     <link rel="stylesheet" href="/css/normalize.css">
@@ -26,23 +26,29 @@
 
 <body>
 
-    <h1>Recipe Collection App</h1>
-    <p class="tagline">A place for you to post your recipes and be inspired by others!</p>
+    <header>
+        <?php
+            echo '<h1>' . $userName . '\'s Recipe Collection</h1>'
+        ?>
+    </header>
 
     <section class="collection-container">
         <?php
-        foreach ($recipes as $recipe) {
+        foreach ($usersRecipes as $recipe) {
             echo '<form class="recipe-gallery-item">'
                 . '<input type="hidden" class="recipe-id" value="' . $recipe->getId() . '></input>'
                 . '<button type="submit" name="submit" class="display-img">
-                                   <img class="imglink" src=' . $recipe->getImglink() . ' alt="' . $recipe->getTitle() . '" />
-                               </button>'
+                           <img class="imagelink" src=' . $recipe->getImglink() . ' alt="' . $recipe->getTitle() . '" />
+                       </button>'
                 . '</form>';
         }
         ?>
     </section>
 
     <nav class="footer-nav-bar">
+        <a class="home" href="/home">
+            <i class="fa-solid fa-house"></i>
+        </a>
     </nav>
 
 </body>

@@ -18,24 +18,24 @@ body h1 {
 }
 body .tagline {
   width: 90%;
-  margin: 1rem 1rem 1rem;
+  margin: 1.5rem 1rem 1rem;
   text-align: center;
   color: #53B8A0;
 }
-body .all-recipes-container {
+body .collection-container {
   width: 90%;
-  margin: 0 auto;
+  margin: 2.5rem auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-body .all-recipes-container .recipe-gallery-item {
+body .collection-container .recipe-gallery-item {
   margin: 0;
   display: flex;
   flex-direction: row;
   width: 33%;
 }
-body .all-recipes-container .recipe-gallery-item .imglink {
+body .collection-container .recipe-gallery-item .imglink {
   width: 100%;
 }
 body .footer-nav-bar {
