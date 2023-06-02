@@ -13,14 +13,14 @@ body h1 {
   width: 90%;
   margin: 0 auto;
   padding-top: 1.5rem;
-  color: #53B8A0;
+  color: #5BAC98;
   text-align: center;
 }
 body .tagline {
   width: 90%;
   margin: 1.5rem 1rem 1rem;
   text-align: center;
-  color: #53B8A0;
+  color: #5BAC98;
 }
 body .collection-container {
   width: 90%;
@@ -50,6 +50,16 @@ body .footer-nav-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+body .footer-nav-bar .home {
+  margin-left: 1.5rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: #5BAC98;
+  list-style-type: none;
+}
+body .footer-nav-bar .home:visited {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
