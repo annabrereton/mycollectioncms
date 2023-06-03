@@ -31,11 +31,10 @@ class UserRecipeCollectionController
 //        print_r($userName);
 //        echo '</pre>';
 
-        return $this->renderer->render($response, 'collection.php', ['usersRecipes' => $data, 'userName' => $userName]);
+        return $this->renderer->render($response, 'collection.php',
+               ['usersRecipes' => $data,
+                'userName' => $userName]
+        );
 
     }
 }
-
-//        return $this->renderer->render($response, 'collection.php');
-
-//getqueryparams to get user id

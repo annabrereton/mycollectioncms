@@ -24,23 +24,34 @@
 
 </head>
 <body>
-<h1>Collection App</h1>
-<p>A place for you to post your photos</p>
+    <h1>Collection App</h1>
+    <p class="tagline">Don't have an account? Sign up <a class="signup-link" href="/signup" >here!</a></p>
 
-<section class="index-login">
-    <div class="wrapper">
-        <div class="index-login-login">
-            <h4>LOGIN</h4>
-            <p>Don't have an account? Sign up <a href="/signup" >here!</a></p>
-            <form action="/login" method="post">
-                <input type="text" name="uid" placeholder="Username">
-                <br>
-                <input type="password" name="pwd" placeholder="Password">
-                <br>
-                <button type="submit" name="submit">LOGIN</button>
+    <section class="form-container">
+        <h4>LOGIN</h4>
+        <div class="index-login">
+            <form action="/login" method="post" class="form">
+                <div class="input-container">
+                    <label class="input-label">Username: </label>
+                    <input type="text" name="uid" placeholder="Username" class="input">
+                </div>
+                <div class="input-container">
+                    <label class="input-label">Password: </label>
+                    <input type="password" name="pwd" placeholder="Password">
+                </div>
+                <button type="submit" name="submit" class="submit">LOGIN</button>
             </form>
         </div>
-    </div>
-</section>
+    </section>
+
+    <nav class="footer-nav-bar">
+        <a class="home" href="/home">
+            <i class="fa-solid fa-house"></i>
+        </a>
+        <div class="login-link-btn">
+            <a class="login-link" href="/login">Login</a>
+        </div>
+    </nav>
+
 </body>
 </html>

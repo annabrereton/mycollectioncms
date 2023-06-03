@@ -43,6 +43,11 @@
     </section>
 
     <nav class="footer-nav-bar">
+        <div class="nav-button-container">
+            <div class="login-link-btn">
+                <a class="login-link" href="/login">Login</a>
+            </div>
+        </div>
     </nav>
 
 </body>

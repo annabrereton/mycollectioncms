@@ -29,6 +29,21 @@ class UserModel
         return $userName;
     }
 
+    public function getIdByUsername($uid): array
+    {
+        $sql = 'SELECT `id` '
+            . 'FROM `users` '
+            . 'WHERE `uid` = :uid; ';
+
+        $values = [':uid' => $uid];
+
+        $query = $this->db->prepare($sql);
+        $query->execute($values);
+        $userId = $query->fetch();
+
+        return $userId;
+    }
+
 //    public function fetchUserDataFromUsersId($id): array
 //    {
 //        $sql = 'SELECT `id`, `uid`, `pwd`, `email` '

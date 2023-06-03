@@ -1,0 +1,65 @@
+@import './variables.scss';
+
+.signup-link {
+  color: $main-text-color;
+  list-style-type: none;
+
+  a.signup-link {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent element */
+  }
+
+  a.signup-link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  a.signup-link:visited {
+    text-decoration: none;
+  }
+}
+
+.form-container {
+  width: 55%;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .index-login {
+    width: 100%;
+
+    h4 {
+      text-align: center;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .form {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+
+      .input-container {
+        display: flex;
+        align-items: center;
+
+        .input-label {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .submit {
+        width: 70%;
+        align-self: end;
+        justify-self: end;
+      }
+    }
+  }
+}
+
+
+
+
