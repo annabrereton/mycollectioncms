@@ -26,9 +26,8 @@
 <body>
     <h1>Collection App</h1>
     <p class="tagline">Don't have an account? Sign up <a class="signup-link" href="/signup" >here!</a></p>
-
+    <h4>LOGIN</h4>
     <section class="form-container">
-        <h4>LOGIN</h4>
         <div class="index-login">
             <form action="/login" method="post" class="form">
                 <div class="input-container">
@@ -48,9 +47,6 @@
         <a class="home" href="/home">
             <i class="fa-solid fa-house"></i>
         </a>
-        <div class="login-link-btn">
-            <a class="login-link" href="/login">Login</a>
-        </div>
     </nav>
 
 </body>

@@ -19,19 +19,20 @@
   }
 }
 
+h4 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 .form-container {
   width: 55%;
-  margin: 5rem auto;
+  margin: 3rem 3rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  //align-items: center;
 
   .index-login {
     width: 100%;
-
-    h4 {
-      text-align: center;
-    }
 
     p {
       text-align: center;

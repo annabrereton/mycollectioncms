@@ -14,18 +14,19 @@
   text-decoration: none;
 }
 
+h4 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
 .form-container {
   width: 55%;
-  margin: 5rem auto;
+  margin: 3rem 3rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 .form-container .index-login {
   width: 100%;
-}
-.form-container .index-login h4 {
-  text-align: center;
 }
 .form-container .index-login p {
   text-align: center;
@@ -46,6 +47,51 @@
   width: 70%;
   align-self: end;
   justify-self: end;
+}
+
+.footer-nav-bar {
+  width: 100%;
+  height: 3rem;
+  margin: 0;
+  color: #5BAC98;
+  background-color: #394542;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+.footer-nav-bar .home {
+  margin-left: 1.5rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: #2E7160;
+  list-style-type: none;
+  align-self: end;
+}
+.footer-nav-bar .home:visited {
+  text-decoration: none;
+}
+.footer-nav-bar .nav-button-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.footer-nav-bar .nav-button-container .login-link-btn {
+  margin-left: 1.3rem;
+  margin-right: 1.3rem;
+  padding: 0.3rem;
+  border: 0.1rem solid #C7C7C7;
+  border-radius: 0.5rem;
+}
+.footer-nav-bar .nav-button-container .login-link {
+  padding: 0.3rem;
+  color: #53B8A0;
+  text-decoration: none;
+}
+.footer-nav-bar .nav-button-container .login-link:visited {
+  text-decoration: none;
 }
 
 *, *::before, *::after {
@@ -87,38 +133,6 @@ body .collection-container .recipe-gallery-item {
 }
 body .collection-container .recipe-gallery-item .imglink {
   width: 100%;
-}
-body .footer-nav-bar {
-  width: 100%;
-  height: 3rem;
-  margin: 0;
-  color: #5BAC98;
-  background-color: #394542;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
-body .footer-nav-bar .nav-button-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-body .footer-nav-bar .nav-button-container .login-link-btn {
-  margin-left: 1.3rem;
-  margin-right: 1.3rem;
-  padding: 0.3rem;
-  border: 0.1rem solid #C7C7C7;
-  border-radius: 0.5rem;
-}
-body .footer-nav-bar .nav-button-container .login-link {
-  padding: 0.3rem;
-  color: #53B8A0;
-  text-decoration: none;
-}
-body .footer-nav-bar .nav-button-container .login-link:visited {
-  text-decoration: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
